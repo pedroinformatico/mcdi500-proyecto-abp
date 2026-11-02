@@ -86,3 +86,34 @@ Las pruebas de `tests/` cubren los módulos de `src/pipeline/` en casos normales
 ## Integración continua
 
 Cada `push` y `pull request` ejecuta `scripts/run_all.py` en GitHub Actions sobre un equipo limpio (`.github/workflows/ejecucion.yml`). El log y los notebooks ejecutados quedan como artefacto `evidencia-ejecucion` en cada corrida.
+
+## Flujo de trabajo con Git
+
+Se usa un GitFlow adaptado a ciencia de datos:
+
+| Rama | Uso |
+|---|---|
+| `main` | Versión estable; cada entrega queda marcada con un tag (`entrega-s1`, `entrega-s2`, `entrega-s3`) |
+| `feature/<tema>` | Nuevas funciones, módulos o notebooks (por ejemplo `feature/f2-pipeline`) |
+| `experiment/<tema>` | Pruebas de enfoques alternativos que pueden descartarse |
+| `hotfix/<tema>` | Correcciones urgentes sobre `main` |
+
+Las ramas se integran a `main` con merge sin avance rápido (`--no-ff`) o pull request, para que el historial muestre cada bloque de trabajo.
+
+Convención de commits: `tipo(alcance): descripción en español`, un cambio verificable por commit.
+
+| Tipo | Cuándo |
+|---|---|
+| `feat` | Nueva funcionalidad (módulo, función, notebook) |
+| `fix` | Corrección de un error |
+| `test` | Pruebas nuevas o ajustadas |
+| `docs` | Documentación, README, decisiones |
+| `build` | Entorno, dependencias, scripts de ejecución |
+| `ci` | Integración continua |
+| `chore` | Mantenimiento y estructura |
+
+## Contribuciones
+
+| Integrante | Aportes principales |
+|---|---|
+| Pedro Hernández | Estructura del repositorio, entorno reproducible y ejecución automatizada |
