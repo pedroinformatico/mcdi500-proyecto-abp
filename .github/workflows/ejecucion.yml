@@ -1,0 +1,41 @@
+# Ejecución completa del proyecto en un equipo limpio (Ubuntu) en cada push y pull request.
+# Es la evidencia de que el entorno declarado basta para correr pruebas y notebooks sin errores.
+name: Ejecución completa
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  run-all:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obtener el repositorio
+        uses: actions/checkout@v4
+
+      - name: Instalar Python según .python-version
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: .python-version
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Instalar dependencias fijadas y el paquete del proyecto
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+          python -m pip install -e .
+
+      - name: Verificar entorno, ejecutar pruebas y notebooks
+        run: python scripts/run_all.py
+
+      - name: Guardar log y notebooks ejecutados como evidencia
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: evidencia-ejecucion
+          path: |
+            docs/evidencias/*.log
+            F1/*.ipynb
+            F2/*.ipynb

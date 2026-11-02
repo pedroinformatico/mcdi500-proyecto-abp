@@ -1,5 +1,7 @@
 # Proyecto ABP · MCDI500 Programación para la Ciencia de Datos
 
+[![Ejecución completa](https://github.com/pedroinformatico/mcdi500-proyecto-abp/actions/workflows/ejecucion.yml/badge.svg)](https://github.com/pedroinformatico/mcdi500-proyecto-abp/actions/workflows/ejecucion.yml)
+
 Repositorio del proyecto transversal del curso MCDI500 (Magíster en Ciencia de Datos e Inteligencia Artificial, Universidad Andrés Bello).
 
 ## Descripción del proyecto
@@ -80,3 +82,7 @@ python -m pytest
 ```
 
 Las pruebas de `tests/` cubren los módulos de `src/pipeline/` en casos normales, límite y excepciones.
+
+## Integración continua
+
+Cada `push` y `pull request` ejecuta `scripts/run_all.py` en GitHub Actions sobre un equipo limpio (`.github/workflows/ejecucion.yml`). El log y los notebooks ejecutados quedan como artefacto `evidencia-ejecucion` en cada corrida.
