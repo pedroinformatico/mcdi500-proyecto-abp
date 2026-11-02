@@ -1,0 +1,18 @@
+# Dependencias del proyecto con versiones fijadas (==) para que el entorno
+# sea idéntico en cualquier equipo. Verificación: python scripts/check_environment.py
+
+# Ecosistema científico
+numpy==2.5.4
+pandas==3.1.0
+matplotlib==3.11.2
+seaborn==0.13.2
+
+# Notebooks y su ejecución reproducible
+jupyterlab==4.6.5
+ipykernel==7.4.0
+nbconvert==7.17.2
+nbclient==0.11.0
+nbformat==5.11.1
+
+# Pruebas automatizadas
+pytest==9.2.0
