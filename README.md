@@ -137,3 +137,4 @@ Convención de commits: `tipo(alcance): descripción en español`, un cambio ver
 | Integrante | Aportes principales |
 |---|---|
 | Pedro Hernández | Estructura del repositorio, entorno reproducible y ejecución automatizada |
+| Cristián Cordero (usuario de GitHub: Isonauta) | Contexto del caso del F1 y redacción del informe |
