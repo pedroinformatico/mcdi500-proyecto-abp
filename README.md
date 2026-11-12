@@ -4,6 +4,14 @@
 
 Repositorio del proyecto transversal del curso MCDI500 (Magíster en Ciencia de Datos e Inteligencia Artificial, Universidad Andrés Bello).
 
+## Grupo 5
+
+| Integrante | GitHub |
+|---|---|
+| Felipe Contreras | _(por confirmar)_ |
+| Cristián Cordero | [@Isonauta](https://github.com/Isonauta) |
+| Pedro Hernández | [@pedroinformatico](https://github.com/pedroinformatico) |
+
 ## Descripción del proyecto
 
 > **Por desarrollar:** problemática, objetivo general y dataset utilizado (resumen de `F1/F1_Definición.ipynb`).
@@ -13,12 +21,24 @@ Repositorio del proyecto transversal del curso MCDI500 (Magíster en Ciencia de 
 ```
 F1/                  Fase 1 · definición del proyecto y mapa conceptual técnico
 F2/                  Fase 2 · pipeline de datos (obtención → validación)
+F3/                  Fase 3 · núcleo algorítmico, eficiencia y POO (Sumativa 2)
+F4/                  Fase 4 · presentación y comunicación (Sumativa 3)
 src/pipeline/        módulos reutilizables del pipeline (importables desde los notebooks)
 tests/               pruebas automatizadas con pytest
-data/raw/            datos originales (no se modifican)
+data/raw/            subconjuntos congelados de la fuente y su manifiesto con SHA-256 (no se modifican)
 data/processed/      datos generados por el pipeline (se regeneran, no se versionan)
-docs/                entorno, decisiones técnicas, trazabilidad y evidencias de ejecución
-scripts/             verificación del entorno y ejecución completa
+data/external/       archivos nacionales descargados (temporales, no se versionan)
+docs/                entorno, decisiones técnicas, trazabilidad, validación del dataset y evidencias
+scripts/             obtención de datos, validador del curso, verificación del entorno y ejecución completa
+```
+
+## Datos
+
+Datos abiertos de ChileCompra: **órdenes de compra** y **licitaciones** del sector salud en la Región de Valparaíso, septiembre 2024 y septiembre 2025. Los subconjuntos ya están en `data/raw/`, con su huella SHA-256 en `data/raw/manifest.json`. Fuente, licencia, filtro y cuidados de lectura: [`data/README.md`](data/README.md).
+
+```bash
+python scripts/fetch_data.py --verify     # comprueba que data/raw/ no cambió
+python scripts/fetch_data.py --months 2025-08 2025-10 --sources oc   # agrega meses
 ```
 
 ## Requisitos
