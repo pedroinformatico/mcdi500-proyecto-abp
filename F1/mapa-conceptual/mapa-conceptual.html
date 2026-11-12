@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Mapa conceptual técnico · Grupo 5 · MCDI500</title>
+<style>
+  @page { size: letter landscape; margin: 0; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #dde1e5; font-family: Calibri, Carlito, Arial, sans-serif; color: #1d2329; }
+  .page { position: relative; width: 1056px; height: 816px; background: #fff; margin: 18px auto; box-shadow: 0 2px 10px rgba(0,0,0,.18); overflow: hidden; page-break-after: always; }
+  .aviso { max-width: 1056px; margin: 14px auto 0; background: #fff8e1; border: 1px solid #f0c36d; border-radius: 6px; padding: 8px 12px; font-size: 14px; }
+  @media print { body { background: #fff; } .page { margin: 0; box-shadow: none; } .aviso { display: none; } }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  .portada { position: absolute; left: 40px; right: 40px; top: 18px; height: 80px; border-bottom: 3px solid #1565c0; }
+  .portada .inst { font-size: 13px; color: #455a64; }
+  .portada h1 { margin: 2px 0 3px; font-size: 21px; color: #0d3c78; }
+  .portada .meta { font-size: 14px; }
+  .portada b { color: #0d3c78; }
+
+  .n { position: absolute; border: 2px solid; border-radius: 8px; padding: 5px 7px; font-size: 13.3px; line-height: 1.2; text-align: center; z-index: 2; display: flex; flex-direction: column; justify-content: center; }
+  .n b { font-size: 14.7px; display: block; }
+  .n code, code { font-family: Consolas, Menlo, monospace; font-size: 11.5px; }
+  .verde   { border-color: #2e7d32; background: #e8f5e9; }
+  .azul    { border-color: #1565c0; background: #e3f2fd; }
+  .naranja { border-color: #ef6c00; background: #fff3e0; }
+  .morado  { border-color: #6a1b9a; background: #f3e5f5; }
+  .gris    { border-color: #455a64; background: #eceff1; }
+  .franja  { position: absolute; left: 28px; right: 28px; border: 1.5px dashed #90a4ae; border-radius: 12px; background: #fafcfd; z-index: 0; }
+  .rot     { position: absolute; font-size: 12px; font-weight: bold; letter-spacing: .04em; text-transform: uppercase; color: #0d3c78; z-index: 3; background: #fff; padding: 0 6px; }
+  svg.e    { position: absolute; left: 0; top: 0; z-index: 1; }
+  svg.e text { font-family: Calibri, Carlito, Arial, sans-serif; font-size: 12.5px; font-style: italic; paint-order: stroke; stroke: #fff; stroke-width: 4px; stroke-linejoin: round; }
+
+  .leyenda { position: absolute; left: 40px; right: 40px; top: 690px; border: 1px solid #b0bec5; border-radius: 8px; padding: 6px 10px; font-size: 13px; display: flex; flex-wrap: wrap; gap: 4px 18px; align-items: center; background: #fff; z-index: 2; }
+  .leyenda span.i { display: inline-flex; align-items: center; gap: 5px; }
+  .m { display: inline-block; width: 20px; height: 12px; border: 2px solid; border-radius: 3px; }
+  .l { display: inline-block; width: 30px; height: 0; }
+  .pie { position: absolute; left: 40px; right: 40px; bottom: 12px; font-size: 12px; color: #546e7a; }
+
+  /* Página 2 */
+  .grid { position: absolute; left: 40px; right: 40px; top: 56px; bottom: 34px; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto 1fr; gap: 12px 16px; }
+  .card { border: 2px solid; border-radius: 8px; padding: 10px 14px; font-size: 15px; line-height: 1.28; }
+  .card h3 { margin: 0 0 4px; font-size: 15px; color: #0d3c78; }
+  .card p { margin: 0 0 5px; }
+  .card pre { margin: 0; font-family: Consolas, Menlo, monospace; font-size: 13px; line-height: 1.35; }
+  .refs p { padding-left: 1.6em; text-indent: -1.6em; margin: 0 0 4px; font-size: 14px; }
+  .h2 { position: absolute; left: 40px; top: 20px; font-size: 19px; font-weight: bold; color: #0d3c78; }
+</style>
+</head>
+<body>
+
+
+<!-- ======================= PÁGINA 1 · EL MAPA ======================= -->
+<section class="page">
+  <div class="portada">
+    <div class="inst">Universidad Andrés Bello · Magíster en Ciencia de Datos e IA · MCDI500 Programación para la Ciencia de Datos · Formativa 1 (Fase 1)</div>
+    <h1>Mapa conceptual técnico: compras públicas de salud en la Región de Valparaíso (ChileCompra)</h1>
+    <div class="meta"><b>Grupo 5:</b> Felipe Contreras Saavedra · Cristián Cordero Placencia · Pedro Hernández Letelier &nbsp;|&nbsp; <b>Docente:</b> Omar Salinas &nbsp;|&nbsp; noviembre de 2026</div>
+  </div>
+
+  <!-- Franja 1 · Problema -->
+  <div class="n verde" style="left:40px; top:112px; width:240px; height:92px;"><b>Ley N.° 21.634</b>moderniza las compras públicas; sus cambios rigen desde dic. 2024</div>
+  <div class="n verde" style="left:368px; top:112px; width:320px; height:92px; border-width:3px;"><b>Pregunta del proyecto</b>¿Cómo cambiaron el trato directo, la compra ágil y la concentración de proveedores entre sept. 2024 y sept. 2025?</div>
+  <div class="n verde" style="left:776px; top:112px; width:240px; height:92px;"><b>Datos abiertos ChileCompra</b>25.880 líneas de órdenes de compra de salud (79 variables), más licitaciones</div>
+
+  <!-- Franja 2 y 3 · Flujo, herramientas y evidencias -->
+  <div class="franja" style="top:240px; height:332px;"></div>
+  <div class="rot" style="left:44px; top:231px;">Flujo reproducible de los datos</div>
+
+  <div class="n azul" style="left:40px;  top:296px; width:118px; height:76px;"><b>1 Obtener</b>descarga y filtra salud-Valparaíso</div>
+  <div class="n azul" style="left:183px; top:296px; width:118px; height:76px;"><b>2 Explorar</b>tipos, nulos y duplicados</div>
+  <div class="n azul" style="left:326px; top:296px; width:118px; height:76px;"><b>3 Limpiar</b>38 % sin dato de trato directo (2025)</div>
+  <div class="n azul" style="left:469px; top:296px; width:118px; height:76px;"><b>4 Transformar</b>montos CLP/UF/USD; 1 fila por orden</div>
+  <div class="n azul" style="left:612px; top:296px; width:118px; height:76px;"><b>5 Validar</b>reglas de calidad y pruebas</div>
+  <div class="n azul" style="left:755px; top:296px; width:118px; height:76px;"><b>6 Analizar</b>% trato directo y ágil; top 10 proveedores</div>
+  <div class="n azul" style="left:898px; top:296px; width:118px; height:76px;"><b>7 Comunicar</b>gráficos e informe</div>
+
+  <div class="n naranja" style="left:40px;  top:412px; width:118px; height:50px;"><b>Script Python</b><code>fetch_data.py</code></div>
+  <div class="n naranja" style="left:183px; top:412px; width:118px; height:50px;"><b>Jupyter</b>código + texto</div>
+  <div class="n naranja" style="left:326px; top:412px; width:118px; height:50px;"><b>pandas</b></div>
+  <div class="n naranja" style="left:469px; top:412px; width:118px; height:50px;"><b>pandas + NumPy</b></div>
+  <div class="n naranja" style="left:612px; top:412px; width:118px; height:50px;"><b>pytest</b>y GitHub Actions</div>
+  <div class="n naranja" style="left:755px; top:412px; width:118px; height:50px;"><b>Clases Python</b><code>src/pipeline/</code></div>
+  <div class="n naranja" style="left:898px; top:412px; width:118px; height:50px;"><b>Matplotlib</b></div>
+
+  <div class="n morado" style="left:40px;  top:502px; width:118px; height:56px;"><code>data/raw/</code>+ huella SHA-256</div>
+  <div class="n morado" style="left:183px; top:502px; width:118px; height:56px;">notebook <code>02_exploracion</code></div>
+  <div class="n morado" style="left:326px; top:502px; width:118px; height:56px;"><code>decisiones.md</code>qué se corrigió y por qué</div>
+  <div class="n morado" style="left:469px; top:502px; width:118px; height:56px;"><code>data/processed/</code>se regenera</div>
+  <div class="n morado" style="left:612px; top:502px; width:118px; height:56px;">log de ejecución sin errores</div>
+  <div class="n morado" style="left:755px; top:502px; width:118px; height:56px;">notebook F3 con resultados</div>
+  <div class="n morado" style="left:898px; top:502px; width:118px; height:56px;">informe PDF con citas APA</div>
+
+  <!-- Franja 4 · Base -->
+  <div class="n gris" style="left:40px; top:612px; width:620px; height:62px;"><b>Git (local) + GitHub (remoto)</b><span>rama por tarea → commits descriptivos → pull request → revisión de un compañero → <code>main</code></span></div>
+  <div class="n gris" style="left:700px; top:612px; width:316px; height:62px;"><b>Entorno reproducible</b><span><code>.venv</code> + <code>requirements.txt</code> con versiones fijas · Python 3.14</span></div>
+
+  <svg class="e" width="1056" height="816" viewBox="0 0 1056 816">
+    <defs>
+      <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="#455a64"/></marker>
+      <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0L10,5L0,10z" fill="#1565c0"/></marker>
+      <marker id="o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="#e65100"/></marker>
+    </defs>
+    <!-- Problema -->
+    <g stroke="#455a64" stroke-width="1.8" fill="none" marker-end="url(#g)">
+      <path d="M280,158 H366"/><path d="M776,158 H690"/><path d="M528,204 V238"/>
+    </g>
+    <g fill="#37474f" text-anchor="middle">
+      <text x="323" y="150">motiva</text><text x="733" y="150">responden</text><text x="604" y="226" >se responde con</text>
+    </g>
+    <!-- Flujo: cada etapa entrega sus datos a la siguiente -->
+    <g stroke="#1565c0" stroke-width="3" fill="none" marker-end="url(#b)">
+      <path d="M158,334 H181"/><path d="M301,334 H324"/><path d="M444,334 H467"/><path d="M587,334 H610"/><path d="M730,334 H753"/><path d="M873,334 H896"/>
+    </g>
+    <!-- Retornos -->
+    <g stroke="#e65100" stroke-width="2" stroke-dasharray="7 4" fill="none" marker-end="url(#o)">
+      <path d="M242,296 C242,250 330,262 392,206"/>
+      <path d="M671,296 C640,262 420,262 385,294"/>
+    </g>
+    <g fill="#bf360c" text-anchor="middle">
+      <text x="292" y="226">puede redefinir</text><text x="528" y="276">si falla, vuelve a</text>
+    </g>
+    <!-- Etapa usa herramienta; herramienta deja evidencia -->
+    <g stroke="#455a64" stroke-width="1.6" fill="none" marker-end="url(#g)">
+      <path d="M99,372 V410"/><path d="M242,372 V410"/><path d="M385,372 V410"/><path d="M528,372 V410"/><path d="M671,372 V410"/><path d="M814,372 V410"/><path d="M957,372 V410"/>
+      <path d="M99,462 V500"/><path d="M242,462 V500"/><path d="M385,462 V500"/><path d="M528,462 V500"/><path d="M671,462 V500"/><path d="M814,462 V500"/><path d="M957,462 V500"/>
+    </g>
+    <g fill="#37474f">
+      <text x="105" y="395">usa</text><text x="248" y="395">usa</text><text x="391" y="395">usa</text><text x="534" y="395">usa</text><text x="677" y="395">usa</text><text x="820" y="395">usa</text><text x="963" y="395">usa</text>
+      <text x="105" y="485">deja</text><text x="248" y="485">deja</text><text x="391" y="485">deja</text><text x="534" y="485">deja</text><text x="677" y="485">deja</text><text x="820" y="485">deja</text><text x="963" y="485">deja</text>
+    </g>
+    <!-- Base -->
+    <g stroke="#455a64" stroke-width="1.8" fill="none" marker-end="url(#g)">
+      <path d="M350,612 V574"/><path d="M858,612 V574"/>
+    </g>
+    <g fill="#37474f">
+      <text x="358" y="598">versionan cada etapa y sus evidencias</text><text x="866" y="598">ejecuta igual todo el flujo</text>
+    </g>
+  </svg>
+
+  <div class="leyenda">
+    <b>Leyenda:</b>
+    <span class="i"><span class="m verde"></span>problema y datos</span>
+    <span class="i"><span class="m azul"></span>etapa del flujo</span>
+    <span class="i"><span class="m naranja"></span>herramienta</span>
+    <span class="i"><span class="m morado"></span>evidencia o documentación</span>
+    <span class="i"><span class="m gris"></span>base técnica</span>
+    <span class="i"><span class="l" style="border-top:3px solid #1565c0"></span>entrega sus datos a</span>
+    <span class="i"><span class="l" style="border-top:2px dashed #e65100"></span>retorno (el ciclo no es lineal)</span>
+    <span class="i"><span class="l" style="border-top:1.8px solid #455a64"></span>relación (se lee con su verbo)</span>
+  </div>
+  <div class="pie">Cada columna se lee de arriba abajo: «Explorar usa Jupyter; Jupyter deja el notebook 02_exploracion». · Estructura del repositorio, reflexión y referencias: página 2.</div>
+</section>
+
+<!-- ======================= PÁGINA 2 · RESPALDO ======================= -->
+<section class="page">
+  <div class="h2">Entorno técnico, reflexión y referencias</div>
+  <div class="grid">
+    <div class="card gris">
+      <h3>Estructura del repositorio <code>mcdi500-proyecto-abp</code></h3>
+<pre>F1/  F2/  F3/  F4/   notebooks de cada fase
+src/pipeline/        funciones y clases reutilizables
+tests/               pruebas automáticas (pytest)
+data/raw/            datos originales: no se modifican
+data/processed/      datos limpios: se regeneran
+docs/                decisiones, validación y evidencias
+scripts/             obtener datos, verificar y ejecutar todo
+README.md · requirements.txt · .gitignore</pre>
+      <p style="margin-top:5px"><b>No se versiona:</b> <code>.venv/</code> (se reconstruye), <code>data/processed/</code> (se regenera) ni credenciales.</p>
+    </div>
+    <div class="card gris">
+      <h3>Versionamiento planificado</h3>
+      <p>Una rama por tarea (<code>feature/…</code>, <code>docs/…</code>); se une a <code>main</code> por pull request revisado por otro integrante. Convención de commits: <code>tipo(alcance): descripción</code>.</p>
+<pre>data: subconjuntos de salud, sept. 2024 y sept. 2025
+feat(datos): obtención reproducible de ChileCompra
+docs(f1): redacta el contexto del caso
+fix(limpieza): trata nulos de trato directo y montos</pre>
+    </div>
+    <div class="card verde" style="grid-column: 1 / 3;">
+      <h3>Reflexión técnica del grupo</h3>
+      <p>Elegimos cada herramienta por un reto concreto de estos datos. ChileCompra vuelve a generar sus archivos mensuales, así que congelamos el subconjunto con su huella SHA-256 y nunca modificamos <code>data/raw/</code>. Los archivos traen varias líneas por orden, montos en tres monedas y, en 2025, un 38 % de órdenes sin dato de trato directo; por eso cada corrección se hace con pandas y se justifica en <code>decisiones.md</code>. Jupyter reúne código, resultados y explicación; Git y GitHub dejan registro de quién cambió qué y permiten que los tres revisemos el trabajo.</p>
+      <p>El flujo no es lineal: explorar puede obligarnos a redefinir la pregunta, y una validación fallida nos devuelve a la limpieza. Quedan decisiones abiertas para la Fase 2: cómo tratar las órdenes sin dato de trato directo, con qué valor convertir UF y dólares, y si cruzaremos órdenes con licitaciones.</p>
+    </div>
+    <div class="card gris refs" style="grid-column: 1 / 3; align-self: start;">
+      <h3>Referencias</h3>
+      <p>Dirección ChileCompra. (s. f.). <i>Datos abiertos de ChileCompra</i>. https://datos-abiertos.chilecompra.cl/</p>
+      <p>Dirección ChileCompra. (s. f.). <i>Ley de compras públicas</i>. https://www.chilecompra.cl/ley-de-compras-publicas/</p>
+      <p>The pandas development team. (s. f.). <i>pandas documentation</i>. https://pandas.pydata.org/docs/</p>
+      <p>Universidad Andrés Bello. (2026). <i>Guía de desarrollo: Evaluación Formativa 1 (Fase 1)</i> [Material del curso MCDI500].</p>
+      <p style="margin-top:6px; padding-left:0; text-indent:0; color:#546e7a">Uso de IA generativa: el grupo usó herramientas de IA como apoyo en la diagramación y la redacción; el contenido fue revisado y validado por los integrantes.</p>
+    </div>
+  </div>
+</section>
+</body>
+</html>
