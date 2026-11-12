@@ -27,7 +27,7 @@ Reglas:
 
 ### Cristián Cordero
 
-
+- **Para qué la usé:**
   - Aprender el flujo de trabajo con Git y GitHub (ramas, commits y pull requests) usando Claude.
   - Entender los requisitos de la guía y la rúbrica de la Sumativa 1.
   - Recibir sugerencias de claridad y formato sobre borradores que redacté yo.
