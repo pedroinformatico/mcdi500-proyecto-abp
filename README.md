@@ -137,6 +137,10 @@ Convención de commits: `tipo(alcance): descripción en español`, un cambio ver
 | `ci` | Integración continua |
 | `chore` | Mantenimiento y estructura |
 
+## Uso de IA generativa
+
+La declaración del equipo, con el formato que completa cada integrante, está en [`DECLARACION-USO-IA.md`](DECLARACION-USO-IA.md).
+
 ## Contribuciones
 
 | Integrante | Aportes principales |
