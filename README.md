@@ -8,13 +8,15 @@ Repositorio del proyecto transversal del curso MCDI500 (Magíster en Ciencia de 
 
 | Integrante | GitHub |
 |---|---|
-| Felipe Contreras | _(por confirmar)_ |
+| Felipe Contreras | [@felipec1985](https://github.com/felipec1985) |
 | Cristián Cordero | [@Isonauta](https://github.com/Isonauta) |
 | Pedro Hernández | [@pedroinformatico](https://github.com/pedroinformatico) |
 
 ## Descripción del proyecto
 
-> **Por desarrollar:** problemática, objetivo general y dataset utilizado (resumen de `F1/F1_Definición.ipynb`).
+El proyecto analiza la **concentración del gasto público en salud de la Región de Valparaíso** a partir de las órdenes de compra publicadas por ChileCompra. Compara septiembre de 2024 con septiembre de 2025, antes y después de los cambios de la Ley N.º 21.634, y mide tres cosas: la participación de los principales proveedores, la dependencia de las unidades de compra respecto de ellos y las diferencias según la modalidad de compra (licitación, compra ágil y trato directo).
+
+La definición completa está en [`F1/F1_Definición.ipynb`](F1/F1_Definición.ipynb), y el mapa conceptual técnico, en [`F1/mapa-conceptual/`](F1/mapa-conceptual/).
 
 ## Estructura
 
@@ -145,8 +147,9 @@ La declaración del equipo, con el formato que completa cada integrante, está e
 
 | Integrante | Aportes principales |
 |---|---|
-| Pedro Hernández | Estructura del repositorio, entorno reproducible y ejecución automatizada |
-| Cristián Cordero (usuario de GitHub: Isonauta) | Contexto del caso del F1 y redacción del informe |
+| Pedro Hernández | Estructura del repositorio, entorno reproducible y ejecución automatizada; obtención de datos; pipeline de la Fase 2 con sus pruebas y notebooks |
+| Cristián Cordero (usuario de GitHub: Isonauta) | Contexto, problemática, preguntas y referencias del F1 |
+| Felipe Contreras (usuario de GitHub: felipec1985) | Objetivos, alcance, supuestos y vínculo con el mapa conceptual del F1 |
 ## Licencia
 
 El código y la documentación de este repositorio se publican bajo la [licencia MIT](LICENSE): cualquiera puede usarlos, copiarlos y modificarlos citando a los autores.
