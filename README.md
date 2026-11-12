@@ -118,7 +118,12 @@ Se usa un GitFlow adaptado a ciencia de datos:
 | `experiment/<tema>` | Pruebas de enfoques alternativos que pueden descartarse |
 | `hotfix/<tema>` | Correcciones urgentes sobre `main` |
 
-Las ramas se integran a `main` con merge sin avance rápido (`--no-ff`) o pull request, para que el historial muestre cada bloque de trabajo.
+**Regla del equipo: nadie trabaja directo en `main`.** Todo cambio, también los pequeños, sigue estos pasos:
+
+1. Actualizar `main` (`git pull`) y crear una rama para la tarea: `git checkout -b docs/f1-objetivos`.
+2. Hacer commits descriptivos en esa rama y subirla: `git push -u origin docs/f1-objetivos`.
+3. Abrir un pull request hacia `main` y pedir la revisión de otro integrante.
+4. Unirlo con *merge commit* (no *squash*) cuando esté revisado y la ejecución automática esté en verde. Así el historial conserva los commits de cada integrante.
 
 Convención de commits: `tipo(alcance): descripción en español`, un cambio verificable por commit.
 
