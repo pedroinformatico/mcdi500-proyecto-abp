@@ -147,3 +147,8 @@ La declaración del equipo, con el formato que completa cada integrante, está e
 |---|---|
 | Pedro Hernández | Estructura del repositorio, entorno reproducible y ejecución automatizada |
 | Cristián Cordero (usuario de GitHub: Isonauta) | Contexto del caso del F1 y redacción del informe |
+## Licencia
+
+El código y la documentación de este repositorio se publican bajo la [licencia MIT](LICENSE): cualquiera puede usarlos, copiarlos y modificarlos citando a los autores.
+
+Los datos de `data/raw/` provienen de los datos abiertos de ChileCompra y se rigen por sus propios [términos y condiciones de uso](https://www.chilecompra.cl/terminos-y-condiciones-de-uso/), no por esta licencia.
