@@ -27,7 +27,15 @@ Reglas:
 
 ### Cristián Cordero
 
-> Pendiente: completar con el formato.
+
+  - Aprender el flujo de trabajo con Git y GitHub (ramas, commits y pull requests) usando Claude.
+  - Entender los requisitos de la guía y la rúbrica de la Sumativa 1.
+  - Recibir sugerencias de claridad y formato sobre borradores que redacté yo.
+  - Explorar las columnas de los datos de ChileCompra para evaluar qué preguntas se podían responder.
+  - Buscar referencias y revisar su formato APA.
+- **Qué hice yo:** propuse la línea de análisis (concentración del gasto en pocos proveedores); redacté con mis palabras el contexto, la problemática y las preguntas del análisis; armé la lista de referencias; y subí mis cambios en ramas y pull requests propios.
+- **Cómo lo validé:** abrí las fuentes originales para comprobar las referencias (OCDE, Ley 21.634 y ChileCompra), contrasté las cifras del contexto con la documentación de los datos y revisé cada cambio en el diff antes de hacer el commit.
+
 
 ### Pedro Hernández
 
