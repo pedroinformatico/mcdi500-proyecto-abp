@@ -1,0 +1,72 @@
+{
+  "files": {
+    "lic_2024-09_salud_valparaiso.csv": {
+      "dataset": "Licitaciones con ofertas",
+      "url": "https://transparenciachc.blob.core.windows.net/lic-da/2024-9.zip",
+      "license": "https://www.chilecompra.cl/terminos-y-condiciones-de-uso/",
+      "downloaded_at": "2026-11-08T18:41:54+00:00",
+      "source_zip_sha256": "574039383cb20325bab786aaacd826698eae3c76fa387fe4c763055645c6a628",
+      "source_zip_bytes": 20322625,
+      "national_rows": 178603,
+      "skipped_malformed_lines": 0,
+      "filter": {
+        "sector": "== 'Salud' (sin espacios al inicio ni al final)",
+        "RegionUnidad": "contiene 'Valpara'"
+      },
+      "rows": 2726,
+      "columns": 110,
+      "sha256": "e4f556a376118cf628a330a1e0f9625cb37f12dc4603351eb55c985d16a72fd4"
+    },
+    "lic_2025-09_salud_valparaiso.csv": {
+      "dataset": "Licitaciones con ofertas",
+      "url": "https://transparenciachc.blob.core.windows.net/lic-da/2025-9.zip",
+      "license": "https://www.chilecompra.cl/terminos-y-condiciones-de-uso/",
+      "downloaded_at": "2026-11-08T18:43:24+00:00",
+      "source_zip_sha256": "c83ad29b23092922d6764ab158ca2e6a701ece12a95fcd5a19f66c37fe7cd964",
+      "source_zip_bytes": 15341099,
+      "national_rows": 124680,
+      "skipped_malformed_lines": 0,
+      "filter": {
+        "sector": "== 'Salud' (sin espacios al inicio ni al final)",
+        "RegionUnidad": "contiene 'Valpara'"
+      },
+      "rows": 2361,
+      "columns": 110,
+      "sha256": "d943f722f90cb5e9aed4da774c8b7effcc93c4be0a131c051c711c9c982de0cd"
+    },
+    "oc_2024-09_salud_valparaiso.csv": {
+      "dataset": "Órdenes de compra",
+      "url": "https://transparenciachc.blob.core.windows.net/oc-da/2024-9.zip",
+      "license": "https://www.chilecompra.cl/terminos-y-condiciones-de-uso/",
+      "downloaded_at": "2026-11-08T18:52:46+00:00",
+      "source_zip_sha256": "893a70aa0414c27d17a819d4a80efb9e8acd79dd862de136bbcc383566f1b990",
+      "source_zip_bytes": 92978988,
+      "national_rows": 396516,
+      "skipped_malformed_lines": 0,
+      "filter": {
+        "sector": "== 'Salud' (sin espacios al inicio ni al final)",
+        "RegionUnidadCompra": "contiene 'Valpara'"
+      },
+      "rows": 12025,
+      "columns": 78,
+      "sha256": "fe068e3281155c22046135d2f82c369b70f006ea7dccfb0e4499843b74e32524"
+    },
+    "oc_2025-09_salud_valparaiso.csv": {
+      "dataset": "Órdenes de compra",
+      "url": "https://transparenciachc.blob.core.windows.net/oc-da/2025-9.zip",
+      "license": "https://www.chilecompra.cl/terminos-y-condiciones-de-uso/",
+      "downloaded_at": "2026-11-08T19:02:53+00:00",
+      "source_zip_sha256": "b9f8cadcb3b033527f07020d7e347957f27c5d6863c6b15a62b1ffeff0f3222b",
+      "source_zip_bytes": 96063276,
+      "national_rows": 407358,
+      "skipped_malformed_lines": 0,
+      "filter": {
+        "sector": "== 'Salud' (sin espacios al inicio ni al final)",
+        "RegionUnidadCompra": "contiene 'Valpara'"
+      },
+      "rows": 13855,
+      "columns": 79,
+      "sha256": "e33bc2d595d8eaabc0d9e568b3984ce7c72a2b2272804763d029aebf9bda9424"
+    }
+  }
+}

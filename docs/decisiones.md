@@ -17,8 +17,10 @@ Cada decisión relevante del proyecto queda registrada aquí con su motivo, las 
 | Fecha | Decisión | Alternativas descartadas | Justificación | Impacto | Evidencia |
 |---|---|---|---|---|---|
 | 2026-11-02 | Estructura con carpetas por fase (F1, F2) y lógica reutilizable en `src/pipeline/` | Todo el código dentro de los notebooks | Separar la exploración (notebooks) de la lógica probada (módulos) facilita las pruebas y la reutilización en F3–F4 | Los notebooks importan funciones de `pipeline`; las pruebas viven en `tests/` | `README.md`, `src/pipeline/` |
+| 2026-11-08 | Dataset: datos abiertos de ChileCompra, órdenes de compra y licitaciones del sector salud en la Región de Valparaíso, septiembre 2024 y septiembre 2025 (período confirmado el 2026-11-11) | Egresos hospitalarios del DEIS (ya asignado a otro equipo), atenciones de urgencia del DEIS, despachos EMS de Nueva York | Fuente oficial con términos de uso, dentro de los últimos cinco años y sin datos personales; ambos conjuntos pasan `validar_dataset.py`. El tema es contingente: la Ley 21.634 (vigente desde el 12-dic-2024) da un antes y un después en el mismo mes del año. Las dos fuentes se vinculan por el código de licitación | Dos conjuntos relacionados en `data/raw/`. El informe debe declarar los límites: dos meses, una región, montos nominales | `data/README.md` · `data/raw/manifest.json` · `docs/validacion/` |
 
 ## Fase 2 · Datos
 
 | Fecha | Decisión | Alternativas descartadas | Justificación | Impacto | Evidencia |
 |---|---|---|---|---|---|
+| 2026-11-08 | Obtención por script (`scripts/fetch_data.py`) y subconjunto congelado en `data/raw/` con SHA-256 | Descargar la fuente en cada ejecución; versionar el archivo nacional completo | ChileCompra regenera los meses recientes (el mismo archivo de septiembre 2026 cambió entre el 02 y el 06-nov-2026), así que una nueva descarga no garantiza los mismos datos; el archivo nacional pesa cerca de 100 MB por mes | Los notebooks leen `data/raw/` y pueden verificar las huellas; ampliar meses o cambiar región es un parámetro del script | `scripts/fetch_data.py` · `src/pipeline/chilecompra.py` · `tests/test_chilecompra.py` |
